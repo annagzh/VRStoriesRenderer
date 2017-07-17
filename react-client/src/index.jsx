@@ -1,7 +1,9 @@
+import 'aframe';
+import 'aframe-particle-system-component';
+import 'babel-polyfill';
+import {Entity, Scene} from 'aframe-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import List from './components/List.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,24 +14,19 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $.ajax({
-      url: '/items', 
-      success: (data) => {
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
+    //
   }
 
   render () {
-    return (<div>
-      <h1>Item List</h1>
-      <List items={this.state.items}/>
-    </div>)
+    return (
+      <Scene>
+        <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}}/>
+        <Entity particle-system={{preset: 'snow'}}/>
+        <Entity light={{type: 'point'}}/>
+        <Entity gltf-model={{src: 'virtualcity.gltf'}}/>
+        <Entity text={{value: 'Hello, WebVR!'}}/>
+      </Scene>
+    )
   }
 }
 
