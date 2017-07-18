@@ -7,6 +7,6 @@ var app = express();
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.listen(5000, function() {
-  console.log('listening on port 3000!');
+  console.log(`listening on port 5000!`);
 });
 

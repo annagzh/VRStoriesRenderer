@@ -1,7 +1,7 @@
 import 'aframe';
 import 'aframe-particle-system-component';
 import 'babel-polyfill';
-import {Entity, Scene} from 'aframe-react';
+import {Entity, Scene, Options} from 'aframe-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -20,11 +20,11 @@ class App extends React.Component {
   render () {
     return (
       <Scene>
-        <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}}/>
-        <Entity particle-system={{preset: 'snow'}}/>
-        <Entity light={{type: 'point'}}/>
-        <Entity gltf-model={{src: 'virtualcity.gltf'}}/>
-        <Entity text={{value: 'Hello, WebVR!'}}/>
+          <a-assets>
+          <video id="video" src="https://ucarecdn.com/fadab25d-0b3a-45f7-8ef5-85318e92a261/"
+               autoPlay loop crossorigin="anonymous"></video>
+          </a-assets>
+          <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
       </Scene>
     )
   }
