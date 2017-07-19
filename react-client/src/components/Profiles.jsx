@@ -8,12 +8,12 @@ import Profile from './Profile.jsx';
 
 
 const Profiles = props => {
-let x = 0;
+let x = -6;
 return (
   <Entity>
   {
     props.friends.map(friend => {
-      x ++
+      x +=2
       return (
         <Profile toggle={props.toggle} x={x}/> 
       )

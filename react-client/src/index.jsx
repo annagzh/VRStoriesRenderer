@@ -26,7 +26,7 @@ class App extends React.Component {
       })
     } else {
       this.setState({
-        background: (<a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>)
+        background: (<a-sky src="#video" rotation="0 -90 0"></a-sky>)
       })
     }
     this.setState({
@@ -43,10 +43,10 @@ class App extends React.Component {
       <Scene>
         <Profiles toggle={this.toggle.bind(this)} friends={this.state.friends}/>
         <a-assets> 
-          <video id="video" crossOrigin="anonymous" src="https://s3-us-west-1.amazonaws.com/vrstories/1500141395399"
+          <video id="video" crossOrigin="anonymous" src="https://s3-us-west-1.amazonaws.com/vrstories/360+degree+Video-+Pugs+Chompin+down.mp4"
               autoPlay loop></video> 
-          <video id="story" src="https://s3-us-west-1.amazonaws.com/vrstories/1500430018964" crossOrigin="anonymous" autoPlay ></video>
-        </a-assets> 
+          <img id="story" src="https://s3-us-west-1.amazonaws.com/vrstories/360-panorama-matador-seo.jpg" crossOrigin="anonymous" ></img>
+        </a-assets>
           {this.state.background}
         <Cursor />
       </Scene>
