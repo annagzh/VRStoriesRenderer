@@ -41,7 +41,7 @@ class App extends React.Component {
   render () { 
     return (
       <Scene>
-        <Profile toggle={this.toggle.bind(this)}/>
+        <Profiles toggle={this.toggle.bind(this)} friends={this.state.friends}/>
         <a-assets> 
           <video id="video" crossOrigin="anonymous" src="https://s3-us-west-1.amazonaws.com/vrstories/1500141395399"
               autoPlay loop></video> 
