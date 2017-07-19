@@ -14,7 +14,7 @@ class App extends React.Component {
       items: []
     }
   }
-  
+
 
   componentDidMount() {
     //
@@ -23,7 +23,7 @@ class App extends React.Component {
   render () { 
     return (
       <Scene>
-        <a-box position="0 3.5 -2" rotation="30 30 0" color="skyblue"
+        <a-box position="0 1.5 -4" rotation="30 30 0" color="skyblue"
             event-set__enter="_event: mouseenter; material.color: yellowgreen; scale: 3 1 1"
             event-set__leave="_event: mouseleave; material.color: skyblue; scale: 1 1 1">
           <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
@@ -33,8 +33,8 @@ class App extends React.Component {
               autoPlay loop></video> 
           <img id="story" src="https://s3-us-west-1.amazonaws.com/vrstories/1500134536083" crossOrigin="anonymous"></img>
         </a-assets> 
-        <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere> 
-        {/* <a-sky src="#story"></a-sky> */}
+        <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>     
+        {/* <a-sky src="#story"></a-sky>     */}
         <Cursor />
       </Scene>
     )
