@@ -12,8 +12,10 @@ const Profile = props => (
     animation__rotate={{property: 'rotation', dur: 2000, loop: true, to: '360 360 360'}}
     animation__scale={{property: 'scale', dir: 'alternate', dur: 100, loop: true, to: '1.1 1.1 1.1'}}
     position={{x: props.x, y: 0, z: -3}}
-    events={{click: props.toggle.bind(this)}}>
+    >
   </Entity>
 );
 
 export default Profile;
+
+// events={{click: props.toggle.bind(this)}}
