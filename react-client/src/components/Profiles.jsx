@@ -1,4 +1,4 @@
-import 'aframe';
+import aframe from 'aframe';
 import 'aframe-particle-system-component';
 import 'babel-polyfill';
 import 'aframe-mouse-cursor-component';
@@ -15,7 +15,7 @@ return (
     props.friends.map(friend => {
       x +=2
       return (
-        <Profile toggle={props.toggle} x={x}/> 
+        <Profile toggle={props.toggle} x={x} friend={friend}/>
       )
     })
   }

@@ -12,7 +12,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      friends: ['Alex', 'Anna', 'Corey', 'David'],
+      friends: [{ first: 'Alex', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'},
+                { first: 'Anna', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'},
+                { first: 'Corey', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'}],
       toggle: true,
       background: <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
     }
@@ -38,13 +40,13 @@ class App extends React.Component {
     //
   }
 
-  render () { 
+  render () {
     return (
       <Scene>
         <Profiles toggle={this.toggle.bind(this)} friends={this.state.friends}/>
-        <a-assets> 
+        <a-assets>
           <video id="video" crossOrigin="anonymous" src="https://s3-us-west-1.amazonaws.com/vrstories/360+degree+Video-+Pugs+Chompin+down.mp4"
-              autoPlay loop></video> 
+              autoPlay loop></video>
           <img id="story" src="https://s3-us-west-1.amazonaws.com/vrstories/360-panorama-matador-seo.jpg" crossOrigin="anonymous" ></img>
         </a-assets>
           {this.state.background}
